@@ -1,0 +1,27 @@
+{
+  "name": "yaml-cli",
+  "version": "1.0.0",
+  "description": "A simple CLI for querying and updating YAML files",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyoder/yaml-cli.git"
+  },
+  "keywords": [
+    "yaml",
+    "cli"
+  ],
+  "author": "Dan Yoder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dyoder/yaml-cli/issues"
+  },
+  "homepage": "https://github.com/dyoder/yaml-cli#readme",
+  "dependencies": {
+    "fairmont": "^1.0.0-beta-40",
+    "js-yaml": "^3.5.3"
+  }
+}
