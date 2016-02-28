@@ -1,7 +1,2 @@
-#!/usr/bin/env coffee
-
-[path, query, value] = process.argv[2..]
-
-_query = require "../src"
-_query {path, query, value}
-.then (result) -> console.log result
+#!/usr/bin/env node
+require("../lib/cli.js")

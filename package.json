@@ -2,9 +2,13 @@
   "name": "yaml-cli",
   "version": "1.0.0",
   "description": "A simple CLI for querying and updating YAML files",
-  "main": "lib/index.js",
+  "bin": {
+    "yaml": "bin/yaml"
+  },
   "scripts": {
-    "test": "npm test"
+    "test": "coffee -o lib/ -c src/*.*coffee && test/test.sh",
+    "prepublish": "coffee -o lib/ -c src/*.*coffee",
+    "tag": "(node_modules/.bin/json -f package.json version | xargs -I version git tag -am version version) && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -23,5 +27,9 @@
   "dependencies": {
     "fairmont": "^1.0.0-beta-40",
     "js-yaml": "^3.5.3"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "json": "^9.0.3"
   }
 }
