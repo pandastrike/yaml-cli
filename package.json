@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dyoder/yaml-cli.git"
+    "url": "git+https://github.com/pandastrike/yaml-cli.git"
   },
   "keywords": [
     "yaml",
@@ -21,9 +21,9 @@
   "author": "Dan Yoder",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dyoder/yaml-cli/issues"
+    "url": "https://github.com/pandastrike/yaml-cli/issues"
   },
-  "homepage": "https://github.com/dyoder/yaml-cli#readme",
+  "homepage": "https://github.com/pandastrike/yaml-cli#readme",
   "dependencies": {
     "fairmont": "^1.0.0-beta-40",
     "js-yaml": "^3.5.3"
