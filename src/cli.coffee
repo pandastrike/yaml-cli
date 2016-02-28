@@ -7,3 +7,4 @@ if path? && query?
 else
   console.error "yaml: insufficient arguments"
   console.error "yaml <path> <query>"
+  process.exit -1

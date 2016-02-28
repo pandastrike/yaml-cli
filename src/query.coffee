@@ -1,4 +1,4 @@
-{async, read} = require "fairmont"
+{async, read, isObject, isArray} = require "fairmont"
 YAML = require "js-yaml"
 
 get = (object, key) ->
@@ -24,6 +24,10 @@ _query = async ({path, query, value}) ->
     set current, last, value
     YAML.safeDump root
   else
-    get current, last
+    result = get current, last
+    if (isObject result) || (isArray result)
+      YAML.safeDump result
+    else
+      result
 
 module.exports = _query
