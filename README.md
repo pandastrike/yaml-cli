@@ -39,6 +39,12 @@ foo:
     - "goodbye"
 ```
 
+## Install
+
+```bash
+$ npm install -g yaml-cli
+```
+
 ## Limitations
 
 - Property accessors must not contain a period.
