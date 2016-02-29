@@ -1,6 +1,6 @@
 # yaml-cli
 
-A simple CLI for querying and updating YAML files.
+A simple CLI for working with YAML files.
 
 ## Examples
 
@@ -14,24 +14,24 @@ foo:
     - "hello world"
 ```
 
-You can query properties:
+You can get properties:
 
 ```bash
-$ yaml test.yaml 'foo.bar'
+$ yaml get test.yaml foo.bar
 7
 ```
 
 or array accessors:
 
 ```bash
-$ yaml test.yaml 'foo.baz[1]'
+$ yaml test.yaml foo.baz.1
 hello world
 ```
 
-You can pass a third argument to set a value.
+You can set values, too.
 
 ```bash
-$ yaml test.yaml 'foo.baz[1]' 'goodbye'
+$ yaml set test.yaml foo.baz.1 goodbye
 foo:
   bar: 7
   baz:
@@ -39,16 +39,36 @@ foo:
     - "goodbye"
 ```
 
-## Install
+You can instantiate template files, too. Given the following template:
+
+```
+I would like to say {{foo.baz.1}}
+```
+
+you can instantiate it like this:
+
+```bash
+$ yaml t test.yaml test.template
+I would like to say hello world
+```
+
+## Installation
 
 ```bash
 $ npm install -g yaml-cli
 ```
 
+## Shell Completion
+
+You can set up shell completion like this:
+
+```bash
+$ eval $(yaml env -)
+```
+
 ## Limitations
 
 - Property accessors must not contain a period.
-- Array accessors must be integers.
 - No in-place editing.
 - Cannot read from stdin.
 

@@ -1,6 +1,5 @@
 {call, read, isObject, isArray} = require "fairmont"
 YAML = require "js-yaml"
-{get, set} = require "./reference"
 
 [path, reference, value] = process.argv[2..]
 
@@ -9,8 +8,8 @@ if path? && reference? && value?
     root = current = YAML.safeLoad yield read path
     [keys..., last] = reference.split "."
     for key in keys
-      current = get current, key
-    set current, last, value
+      current = current[key]
+    current[last] = value
     result = YAML.safeDump root
     console.log result
 else
