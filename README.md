@@ -52,6 +52,21 @@ $ yaml t test.yaml test.template
 I would like to say hello world
 ```
 
+You can get more help by just typing `yaml`.
+
+```bash
+$ yaml
+Usage: yaml <command> [<args>]
+
+Some useful yaml commands are:
+   commands  List all yaml commands
+   get       Get a value from a YAML file
+   set       Set a value in a YAML file
+   template  Instantiate a template file with a YAML file.
+
+See 'yaml help <command>' for information on a specific command.
+```
+
 ## Installation
 
 ```bash
