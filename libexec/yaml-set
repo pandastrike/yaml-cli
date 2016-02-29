@@ -11,4 +11,4 @@
 #
 #    yaml get test.yaml foo.baz.1 goodbye
 #
-exec node $_YAML_ROOT/lib/set.js
+exec node $_YAML_ROOT/lib/set.js $@

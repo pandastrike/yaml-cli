@@ -7,4 +7,4 @@
 #
 #    yaml template test.yaml test.tmpl
 #
-exec node $_YAML_ROOT/lib/template.js
+exec node $_YAML_ROOT/lib/template.js $@

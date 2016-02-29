@@ -10,4 +10,4 @@
 #
 #    yaml get test.yaml foo.baz.1
 #
-exec node $_YAML_ROOT/lib/get.js
+exec node $_YAML_ROOT/lib/get.js $@
