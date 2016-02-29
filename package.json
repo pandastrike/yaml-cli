@@ -1,7 +1,13 @@
 {
   "name": "yaml-cli",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A simple CLI for querying and updating YAML files",
+  "files": [
+    "completions",
+    "libexec",
+    "lib",
+    "share"
+  ],
   "bin": {
     "yaml": "bin/yaml"
   },
@@ -26,7 +32,8 @@
   "homepage": "https://github.com/pandastrike/yaml-cli#readme",
   "dependencies": {
     "fairmont": "^1.0.0-beta-40",
-    "js-yaml": "^3.5.3"
+    "js-yaml": "^3.5.3",
+    "markup-js": "^1.5.21"
   },
   "devDependencies": {
     "coffee-script": "^1.10.0",
