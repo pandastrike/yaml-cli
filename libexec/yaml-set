@@ -1,2 +1,14 @@
-#!/usr/bin/env node
-require("../lib/set")
+#!/usr/bin/env bash
+
+# Usage: yaml set <yaml-file> <reference> <value>
+# Summary: Set a value in a YAML file
+# Help: Set a value in a YAML file using a dot-notation reference.
+# Returns the update file on stdout.
+#
+#    yaml set test.yaml foo.bar 7
+#
+# Array references use the same notation, but with numeric keys.
+#
+#    yaml get test.yaml foo.baz.1 goodbye
+#
+exec node $_YAML_ROOT/lib/set.js

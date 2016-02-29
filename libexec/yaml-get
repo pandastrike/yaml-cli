@@ -1,2 +1,13 @@
-#!/usr/bin/env node
-require("../lib/read")
+#!/usr/bin/env bash
+
+# Usage: yaml get <yaml-file> <reference>
+# Summary: Get a value from a YAML file
+# Help: Get a value from a YAML file using a dot-notation reference.
+#
+#    yaml get test.yaml foo.bar
+#
+# Array references use the same notation, but with numeric keys.
+#
+#    yaml get test.yaml foo.baz.1
+#
+exec node $_YAML_ROOT/lib/get.js

@@ -1,2 +1,10 @@
-#!/usr/bin/env node
-require("../lib/template")
+#!/usr/bin/env bash
+
+# Usage: yaml [template | t] <yaml-file> <template-file>
+# Summary: Instantiate a template file with a YAML file.
+# Help: Instantiate a template file with a YAML file.
+# Returns the instantiated template on stdout.
+#
+#    yaml template test.yaml test.tmpl
+#
+exec node $_YAML_ROOT/lib/template.js
