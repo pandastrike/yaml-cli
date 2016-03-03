@@ -1,7 +1,7 @@
 {call, read, isObject, isArray} = require "fairmont"
 YAML = require "js-yaml"
 
-[path, reference, value] = process.argv[2..]
+[path, reference, value...] = process.argv[2..]
 
 if path? && reference? && value?
   call ->
@@ -9,7 +9,7 @@ if path? && reference? && value?
     [keys..., last] = reference.split "."
     for key in keys
       current = current[key]
-    current[last] = value
+    current[last] = value.join(" ")
     result = YAML.safeDump root
     console.log result
 else

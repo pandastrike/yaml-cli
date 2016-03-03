@@ -12,7 +12,7 @@
     "yaml": "libexec/yaml"
   },
   "scripts": {
-    "test": "coffee -o lib/ -c src/*.*coffee && test/test.sh",
+    "test": "coffee -o lib/ -c src/*.*coffee && coffee test/test.coffee",
     "prepublish": "coffee -o lib/ -c src/*.*coffee",
     "tag": "(node_modules/.bin/json -f package.json version | xargs -I version git tag -am version version) && git push --tags"
   },
@@ -36,6 +36,7 @@
     "markup-js": "^1.5.21"
   },
   "devDependencies": {
+    "amen": "^1.0.0-alpha-06",
     "coffee-script": "^1.10.0",
     "json": "^9.0.3"
   }

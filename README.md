@@ -83,8 +83,4 @@ $ eval $(yaml env -)
 
 ## Limitations
 
-- Property accessors must not contain a period.
-- No in-place editing.
-- Cannot read from stdin.
-
-These limitations may be addressed in the future. Please open/upvote issues if you'd be interested in a given feature.
+See the [issues list](https://github.com/pandastrike/yaml-cli/issues)—and please open your own or `+1` your favorites.
