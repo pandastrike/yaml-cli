@@ -34,4 +34,4 @@ module.exports =
       else
         ""
 
-    console.log result
+    process.stdout.write result

@@ -2,6 +2,20 @@
 
 A simple CLI for working with YAML files.
 
+## Installation
+
+```bash
+$ npm install -g yaml-cli
+```
+
+## Shell Completion
+
+You can set up shell completion like this:
+
+```bash
+$ eval $(yaml env -)
+```
+
 ## Examples
 
 Given the following `test.yml` file:
@@ -13,6 +27,8 @@ foo:
     - 17
     - "hello world"
 ```
+
+### get
 
 You can get properties:
 
@@ -28,6 +44,8 @@ $ yaml test.yaml foo.baz.1
 hello world
 ```
 
+### set
+
 You can set values, too.
 
 ```bash
@@ -38,6 +56,8 @@ foo:
     - 17
     - "goodbye"
 ```
+
+### template
 
 You can instantiate template files, too. Given the following template:
 
@@ -50,6 +70,36 @@ you can instantiate it like this:
 ```bash
 $ yaml t test.yaml test.template
 I would like to say hello world
+```
+
+### json
+
+You can read and write JSON.
+
+To convert from JSON to YAML:
+
+```tty
+$ yaml json read test.json
+foo:
+  bar: 7
+  baz:
+    - 17
+    - "hello world"
+```
+
+To convert from YAML to JSON:
+
+```tty
+$ yaml json write test.yaml
+{
+  "foo": {
+    "bar": 7,
+    "baz": [
+      17,
+      "hello world"
+    ]
+  }
+}
 ```
 
 You can get more help by just typing `yaml`.
@@ -65,20 +115,6 @@ Some useful yaml commands are:
    template  Instantiate a template file with a YAML file.
 
 See 'yaml help <command>' for information on a specific command.
-```
-
-## Installation
-
-```bash
-$ npm install -g yaml-cli
-```
-
-## Shell Completion
-
-You can set up shell completion like this:
-
-```bash
-$ eval $(yaml env -)
 ```
 
 ## Limitations

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Usage: yaml json [read|write] <path>
+# Summary: Import/export YAML to/from JSON
+# Help: Read a JSON file and dump YAML.
+#
+#    yaml json read test.json
+#
+# Read a YAML file and dump JSON
+#
+#    yaml json write test.yaml
+#
+exec node $_YAML_ROOT/lib/json.js $@

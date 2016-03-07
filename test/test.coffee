@@ -3,7 +3,7 @@ os = require "os"
 {join} = require "path"
 assert = require "assert"
 Amen = require "amen"
-{shell, async} = require "fairmont"
+{shell, async, read} = require "fairmont"
 
 # convenience functions to make it easier to call the CLI
 sh = async (command) ->
@@ -70,3 +70,17 @@ Amen.describe "YAML CLI", (context) ->
     context.test "instantiation", ->
       assert.equal "I'd like to say hello world",
         yield sh "bin/yaml template  test/test.yaml test/template.txt"
+
+  context.test "json", (context) ->
+
+    context.test "read", ->
+      YAML = require "js-yaml"
+      data = YAML.safeLoad yield sh "bin/yaml json read test/test.json"
+      assert.equal "7", data.foo.bar
+      assert.equal "hello world", data.foo.baz[1]
+
+
+    context.test "write", ->
+      data = JSON.parse yield sh "bin/yaml json write test/test.yaml"
+      assert.equal "7", data.foo.bar
+      assert.equal "hello world", data.foo.baz[1]
