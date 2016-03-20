@@ -1,6 +1,6 @@
 {
   "name": "yaml-cli",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "A simple CLI for querying and updating YAML files",
   "files": [
     "completions",
@@ -14,7 +14,7 @@
   "scripts": {
     "test": "coffee -o lib/ -c src/*.*coffee && coffee test/test.coffee",
     "prepublish": "coffee -o lib/ -c src/*.*coffee",
-    "tag": "(node_modules/.bin/json -f package.json version | xargs -I version git tag -am version version) && git push --tags"
+    "postpublish": "(node_modules/.bin/json -f package.json version | xargs -I version git tag -am version version) && git push --tags"
   },
   "repository": {
     "type": "git",

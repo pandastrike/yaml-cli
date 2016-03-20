@@ -1,5 +1,5 @@
 {call, read} = require "fairmont"
-YAML = require "js-yaml"
+YAML = require "./yaml"
 {get, set} = require "./reference"
 
 
@@ -7,7 +7,7 @@ YAML = require "js-yaml"
 
 if path? && template?
   call ->
-    context = YAML.safeLoad yield read path
+    context = yield YAML.read path
     console.log ((require "markup-js").up (yield read template), context)
 
 else

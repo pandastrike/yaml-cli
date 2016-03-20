@@ -1,5 +1,6 @@
 {async, call, read, isObject, isArray} = require "fairmont"
 YAML = require "./yaml"
+errors = require "./errors"
 
 [subcommand, path] = process.argv[2..]
 
@@ -35,7 +36,7 @@ _JSON =
       else
         ""
 
-    process.stdout.write result
+    console.log result
 
 if subcommand? && subcommand in ["read", "write"] && path?
   call ->

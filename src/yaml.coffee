@@ -24,14 +24,16 @@ module.exports =
 
     result =
       if data?
-        if (isObject data) || (isArray data)
+        if (isObject data)
           try
             YAML.safeDump data
           catch error
             errors.formatYAML error
+        else if (isArray data)
+          data.join "\n"
         else
           data.toString()
       else
         ""
 
-    process.stdout.write result
+    console.log result
