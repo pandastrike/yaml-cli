@@ -40,7 +40,7 @@ $ yaml get test.yaml foo.bar
 or array accessors:
 
 ```bash
-$ yaml test.yaml foo.baz.1
+$ yaml get test.yaml foo.baz.1
 hello world
 ```
 
