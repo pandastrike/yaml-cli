@@ -1,0 +1,6 @@
+[foo]
+bar = 7
+
+[somename.partone]
+one = 7
+two = ["some string", "hello world"]

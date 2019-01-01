@@ -84,3 +84,19 @@ Amen.describe "YAML CLI", (context) ->
       data = JSON.parse yield sh "bin/yaml json write test/test.yaml"
       assert.equal "7", data.foo.bar
       assert.equal "hello world", data.foo.baz[1]
+
+  context.test "toml", (context) ->
+
+    context.test "read", ->
+      YAML = require "js-yaml"
+      data = YAML.safeLoad yield sh "bin/yaml toml read test/test.toml"
+      assert.equal "7", data.foo.bar
+      assert.equal "7", data.somename.partone.one
+      assert.equal "hello world", data.somename.partone.two[1]
+
+
+    context.test "write", ->
+      TOML = require "@iarna/toml"
+      data = TOML.parse yield sh "bin/yaml toml write test/test-toml.yaml"
+      assert.equal "7", data.foo.bar
+      assert.equal "hello world", data.foo.baz[1]

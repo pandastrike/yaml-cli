@@ -1,0 +1,5 @@
+foo:
+  bar: 7
+  baz:
+    - "some string"  # TOML does not allow mixed data types in an array
+    - "hello world"

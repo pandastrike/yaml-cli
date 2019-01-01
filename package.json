@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/pandastrike/yaml-cli#readme",
   "dependencies": {
+    "@iarna/toml": "^2.2.1",
     "fairmont": "^1.0.0-beta-40",
     "js-yaml": "^3.5.3",
     "markup-js": "^1.5.21"

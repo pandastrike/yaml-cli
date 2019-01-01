@@ -22,3 +22,11 @@ module.exports =
   formattingJSON: (error) ->
     console.error "yaml: unable to format result as JSON\n#{error.message}"
     process.exit -1
+
+  parsingTOML: (error) ->
+    console.error "yaml: error parsing TOML\n#{error.message}"
+    process.exit -1
+
+  formattingTOML: (error) ->
+    console.error "yaml: unable to format result as TOML\n#{error.message}"
+    process.exit -1
