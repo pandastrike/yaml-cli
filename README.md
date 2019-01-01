@@ -102,6 +102,33 @@ $ yaml json write test.yaml
 }
 ```
 
+### toml
+
+You can read and write TOML, too.
+
+To convert from TOML to YAML:
+
+```tty
+$ yaml toml read test.toml
+foo:
+  bar: 7
+somename:
+  partone:
+    one: 7
+    two:
+      - some string
+      - hello world
+```
+
+To convert from YAML to TOML:
+
+```tty
+$ yaml toml write test-toml.yaml
+[foo]
+bar = 7
+baz = [ "some string", "hello world" ]
+```
+
 You can get more help by just typing `yaml`.
 
 ```bash
@@ -111,8 +138,10 @@ Usage: yaml <command> [<args>]
 Some useful yaml commands are:
    commands  List all yaml commands
    get       Get a value from a YAML file
+   json      Import/export YAML to/from JSON
    set       Set a value in a YAML file
    template  Instantiate a template file with a YAML file.
+   toml      Import/export YAML to/from TOML
 
 See 'yaml help <command>' for information on a specific command.
 ```
