@@ -64,6 +64,14 @@ Amen.describe "YAML CLI", (context) ->
           bin/yaml set - foo.bar 3 |
           bin/yaml get - foo.bar"
 
+    context.test "pipe with bad yaml", ->
+      fails = undefined
+      yield sh "cat test/bad.yaml |
+        bin/yaml set - foo.bar 3 |
+        bin/yaml set - foo.bar 5"
+      .then -> fails = false
+      .catch -> fails = true
+      assert.equal fails, true, "expected parse error"
 
   context.test "template", (context) ->
 

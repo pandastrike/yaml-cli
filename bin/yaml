@@ -1,1 +1,2 @@
-../libexec/yaml
+#!/bin/sh
+libexec/yaml $@

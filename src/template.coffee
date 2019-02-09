@@ -13,4 +13,4 @@ if path? && template?
 else
   console.error "yaml template: insufficient arguments"
   console.error "yaml template <yaml-path> <template-path>"
-  process.exit -1
+  process.exit 1

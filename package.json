@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/pandastrike/yaml-cli#readme",
   "dependencies": {
-    "fairmont": "^1.0.0-beta-40",
+    "fairmont": "^2.0.1",
     "js-yaml": "^3.5.3",
     "markup-js": "^1.5.21"
   },
