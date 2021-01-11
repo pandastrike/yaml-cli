@@ -48,4 +48,4 @@ if subcommand? && subcommand in ["read", "write"] && path?
 else
   console.error "yaml json: invalid arguments"
   console.error "yaml json [read|write] <path>"
-  process.exit -1
+  process.exit 1
