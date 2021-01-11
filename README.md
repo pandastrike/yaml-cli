@@ -1,6 +1,6 @@
 # yaml-cli
 
-> **Important** This project has been deprecated in favor of [yq](https://github.com/mikefarah/yq).
+> **Important** This project has been deprecated. We recommend [yq](https://github.com/mikefarah/yq).
 
 A simple CLI for working with YAML files.
 
