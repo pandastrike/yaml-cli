@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Usage: yaml toml [read|write] <path>
+# Summary: Import/export YAML to/from TOML
+# Help: Read a TOML file and dump YAML.
+#
+#    yaml toml read test.json
+#
+# Read a YAML file and dump TOML
+#
+#    yaml toml write test.yaml
+#
+exec node $_YAML_ROOT/lib/toml.js $@
